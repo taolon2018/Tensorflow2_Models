@@ -1,2 +1,3 @@
-log/*
-model_weight/*
+log/
+model_weight/
+prediction_result/
