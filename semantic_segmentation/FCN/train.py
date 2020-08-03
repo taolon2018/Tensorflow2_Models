@@ -19,6 +19,9 @@ def train(args):
 
     model = FCN8()
 
+    if not os.path.exists("./model_weight"):
+        model.load_weights("./model_weight/model.h5")
+
     loss_func = tf.keras.losses.SparseCategoricalCrossentropy()
     train_loss_metrics = tf.keras.metrics.SparseCategoricalCrossentropy()
     train_accuracy_metrics = tf.keras.metrics.SparseCategoricalAccuracy()
