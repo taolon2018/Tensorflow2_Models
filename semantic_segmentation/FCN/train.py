@@ -18,7 +18,7 @@ def train(args):
     writer = tf.summary.create_file_writer(tensor_board_log_dir)
 
     model = FCN8()
-
+    model.build((1, 255, 255, 3))
     if os.path.exists("./model_weight/model.h5"):
         model.load_weights("./model_weight/model.h5")
 
